@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+<bean id = "triange" class= "springCoreLearning.chapter07.Triangle">
+	<property name ="pointA" ref="zeroPoint" />
+	<property name ="pointB">
+		<bean class ="springCoreLearning.chapter07.Point">
+			<property name="x" value="1"/>
+			<property name="y" value="2"/>
+		</bean>
+	</property>
+	<property name ="pointC">
+		<bean class ="springCoreLearning.chapter07.Point">
+			<property name="x" value="1"/>
+			<property name="y" value="2"/>
+		</bean>
+	</property>
+</bean>
+
+<bean name = "zeroPoint" class= "springCoreLearning.chapter07.Point">
+	<property name="x" value="0"/>
+	<property name="y" value="1"/>
+</bean>
+
+</beans>
